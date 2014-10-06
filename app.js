@@ -9,11 +9,15 @@ var app = angular.module('app', [
 app.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/partial', {
-        templateUrl: 'partial/action.html',
-        controller: 'movieController'
+      when('/movies', {
+        templateUrl: 'partial/movie-list.html',
+        controller: 'movieListCtrl'
+      }).
+      when('/movies/:movieId', {
+        templateUrl: 'partial/movie-detail.html',
+        controller: 'movieDetailCtrl'
       }).
       otherwise({
-        redirectTo: '/partial'
+        redirectTo: '/movies'
       });
   }]);

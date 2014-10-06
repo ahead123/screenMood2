@@ -1,0 +1,48 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#" class="thumbnail">Screenmood</a>
+    </div>
+    </div>
+    </nav>
+
+    <div class="col-xs-12 col-sm-6 col-md-8 col-md-offset-4" ng-controller="movieListCtrl" >
+      Search: 
+      <input type="search" ng-model="query">
+      Sort by:
+      <select ng-model="orderProp">
+        <option value="name">Title</option>
+        <option value="star">Alphabetical</option>
+      </select>
+      </div>
+      <div class="col-md-10">
+      <ul class="movies">
+        <li ng-repeat="movie in movies | filter:query | orderBy:orderProp" class="thumbnail">
+        <a href="#/movies/{{movie.id}}" class="thumb"><img ng-src="{{movie.imageUrl}}"></a>
+              <strong>Box Office Hits: <a href="#/movies/{{movie.id}}">{{movie.name}}</a></strong>
+              <p><em>Starring: {{movie.star}}</em></p>
+        </li>
+      </ul>
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Back</a>
+    </div>
+    </div>
+    </nav>
