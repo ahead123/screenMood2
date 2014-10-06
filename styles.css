@@ -9,10 +9,10 @@ body {
 
 .thumb {
   float: left;
-  margin: -0.5em 1em 1.5em 0;
+  margin: -0.5em .5em 1.5em 0;
   padding-bottom: 1em;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
 }
 
 .movies li {
@@ -20,3 +20,4 @@ body {
   height: 170px;
   padding-top: 15px;
 }
+
