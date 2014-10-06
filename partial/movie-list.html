@@ -13,7 +13,7 @@
     </div>
     </nav>
 
-    <div class="col-xs-12 col-sm-6 col-md-8 col-md-offset-4" ng-controller="movieListCtrl" >
+    <div class="col-md-8 col-md-offset-2" ng-controller="movieListCtrl" >
       Search: 
       <input type="search" ng-model="query">
       Sort by:
@@ -21,11 +21,11 @@
         <option value="name">Title</option>
         <option value="star">Alphabetical</option>
       </select>
-      </div>
-      <div class="col-md-10">
+      
+      
       <ul class="movies">
         <li ng-repeat="movie in movies | filter:query | orderBy:orderProp" class="thumbnail">
-        <a href="#/movies/{{movie.id}}" class="thumb"><img ng-src="{{movie.imageUrl}}"></a>
+        <a href="#/movies/{{movie.id}}" class="thumb"><img ng-src="{{movie.images}}"></a>
               <strong>Box Office Hits: <a href="#/movies/{{movie.id}}">{{movie.name}}</a></strong>
               <p><em>Starring: {{movie.star}}</em></p>
         </li>

@@ -16,7 +16,7 @@ appControllers.controller('movieListCtrl', function($scope) {
    		'id': 'the-mazerunner'},
     {'name': 'The Blue Room',
      'star': 'Mathieu Almaric',
-   		'images': 'assets/img/trailer1.jpg',
+   		'images': 'assets/img/trailer3.jpg',
    		'id': 'the-blue-room'}
   ];
   
