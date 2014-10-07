@@ -1,58 +1,17 @@
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#" class="thumbnail">Screenmood</a>
-    </div>
-    </div>
-    </nav>
-    <div class="container-fluid">
-    <div class="row">
-    <div class="col-md-6 col-md-offset-5">
-     
-      <input type="search" ng-model="query" placeholder="search" class="text-center">
-      
-      <select ng-model="orderProp" class="btn-primary">
-        <option value="name">Title</option>
-        <option value="star">Alphabetical</option>
-      </select>
-      </div>
-      </div>
-      </div><br>
-
-    <div class="container-fluid">
-    <div class="row">
-    <div class="col-md-8 col-md-offset-2" ng-controller="movieListCtrl" >
-    
-      
+<div class="col-md-4" ng-controller="movieListCtrl" >
+   <input type="search" ng-model="query" placeholder="search" class="text-center pull-right"><br><br>
+      <select ng-model="orderProp" class="btn-primary pull-right">
+         <option value="name">Title</option>
+         <option value="star">Alphabetical</option>
+       </select><br>
+    <h2 class="text-center">Box Office Hits:</h2>  
       <ul class="movies">
         <li ng-repeat="movie in movies | filter:query | orderBy:orderProp" class="thumbnail">
-        <a href="#/movies/{{movie.id}}" class="thumb"><img ng-src="{{movie.images}}"></a>
-              <strong>Box Office Hits: <a href="#/movies/{{movie.id}}">{{movie.name}}</a></strong>
-              <p><em>Starring: {{movie.star}}</em></p>
-              <p><a href="#/movies/{{movie.id}}">Snippet: {{movie.snippet}}</a></p>
+         <a href="#/movies/{{movie.id}}" class="thumb"><img ng-src="{{movie.images}}"></a>
+          <strong><a href="#/movies/{{movie.id}}">{{movie.name}}</a></strong>
+            <p><em>Starring: {{movie.star}}</em></p>
+            <p><a href="#/movies/{{movie.id}}">Snippet: {{movie.snippet}}</a></p>
         </li>
       </ul>
-    </div>
-    </div>
-    </div>
-    <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Back</a>
-    </div>
-    </div>
-    </nav>
+</div>
+    

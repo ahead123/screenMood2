@@ -10,8 +10,12 @@ app.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/movies', {
-        templateUrl: 'partial/movie-list.html',
-        controller: 'movieListCtrl'
+        templateUrl: 'partial/movie-genres.html',
+        controller: 'movieGenreCtrl'
+      }).
+      when('/movies/questions/:questionId', {
+        templateUrl: 'partial/questions.html',
+        controller: 'movieQuestCtrl' 
       }).
       when('/movies/:movieId', {
         templateUrl: 'partial/movie-detail.html',

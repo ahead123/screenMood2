@@ -1,0 +1,14 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2 text-center" ng-controller="movieQuestCtrl">
+			<div ng-controller="movieGenreCtrl">
+				<h1 class="text-primary">Okay let's get a feel for you're mood right now...</h1>
+				<h2>Who would you rather rob a bank with?</h2>
+				<button class="btn btn-lrg btn-success" ng-repeat="question in questions"><h4>{{question.nameone}}</h4></button>
+				<h2>or</h2>
+				<button ng-repeat="question in questions" class="btn btn-lrg btn-warning"><h4>{{question.nametwo}}</h4></button><br>
+	
+			</div>
+		</div>
+	</div>
+</div>

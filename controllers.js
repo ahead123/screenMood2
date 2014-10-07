@@ -31,3 +31,33 @@ appControllers.controller('movieDetailCtrl', ['$scope', '$routeParams',
     $scope.movieId = $routeParams.movieId;
   }]);
 
+appControllers.controller('movieGenreCtrl', function($scope) {
+  $scope.questions = [
+    {'ask': 'Action',
+     'what': 'Who would you rather rob a bank with?',
+     "nameone": "Jack Nicholson",
+     "nametwo": "George Clooney",
+      'id': '1'},
+    {'ask': 'Comedy',
+     'what': 'Who would you rather smoke weed with? Dave Chapelle or Adam Sandler?',
+      'id': '2'},
+    {'ask': 'Romance',
+     'what': 'Who would you go to see strip? Mila Kunis or Halle Berry?',
+      'id': '3'},
+      {'ask': 'Sci-Fi',
+     'what': 'Who would you go to see strip? Mila Kunis or Halle Berry?',
+      'id': '4'},
+      {'ask': 'Foreign',
+     'what': 'Who would you go to see strip? Mila Kunis or Halle Berry?',
+      'id': '5'},
+      {'ask': 'Horror',
+     'what': 'Who would you go to see strip? Mila Kunis or Halle Berry?',
+      'id': '6'}
+  ];
+});
+
+appControllers.controller('movieQuestCtrl', ['$scope', '$routeParams',
+  function($scope, $routeParams) {
+    $scope.questionId = $routeParams.questionId;
+  }]);
+
