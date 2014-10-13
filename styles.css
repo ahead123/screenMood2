@@ -1,6 +1,7 @@
 body { 
-	padding-top: 80px; 
+	padding-top: 40px; 
 	padding-bottom: 80px;
+
 }
 
 .movies {
@@ -20,4 +21,3 @@ body {
   height: 170px;
   padding-top: 15px;
 }
-

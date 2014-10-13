@@ -1,11 +1,11 @@
 <div class="container-fluid">
 <div class="row">
-	<div class="jumbotron text-center">
+	<div class="jumbotron text-center well">
 		<h1>Screenmood</h1>
-			<h4 class="text-muted">Tell us how you're feelin! We'll take care of the rest!</h4>
+			<h4>Tell us how you're feelin! We'll take care of the rest!</h4>
 		</div>
 
-		<div class="col-md-4 text-center lead">
+		<div class="col-md-4 text-center well">
 			<h1>How it works:</h1>
 			<h2>1. Pick a genre</h2>
 			<h2>2. Answer questions</h2>
@@ -13,8 +13,8 @@
 		</div>
 
 		<div class="col-md-4 " ng-controller="movieGenreCtrl">
-			<h2 class="text-center text-info">Pick a genre</h2>
-			<button type="button" ng-repeat="question in questions" class="btn btn-lg btn-info btn-block"><a href="#/movies/questions/{{question.id}}" style="text-decoration: none;"><span style="color:white;">{{question.ask}}<span></a></button><br>
+			<h2 class="text-center well">Pick a genre</h2>
+			<button type="button" ng-repeat="question in questions" class="btn btn-lg btn-primary btn-block"><a href="#/movies/questions/{{question.id}}" style="text-decoration: none;"><span style="color:white;">{{question.ask}}<span></a></button><br>
 
 		</div>
 
