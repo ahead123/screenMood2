@@ -1,25 +1,26 @@
-<div class="container-fluid">
+<div class="container">
 <div class="row">
 	<div class="jumbotron text-center well">
 		<h1>Screenmood</h1>
 			<h4>Tell us how you're feelin! We'll take care of the rest!</h4>
 		</div>
 
-		<div class="col-md-4 text-center well">
+		<!-- <div class="col-md-4 text-center well">
 			<h1>How it works:</h1>
 			<h2>1. Pick a genre</h2>
 			<h2>2. Answer questions</h2>
 			<h2>3. Get your match!</h2>
-		</div>
+		</div> -->
 
-		<div class="col-md-4 " ng-controller="movieGenreCtrl">
+		<div class="col-md-6 col-md-offset-3 well" ng-controller="movieGenreCtrl">
 			<h2 class="text-center well">Pick a genre</h2>
-			<button type="button" ng-repeat="question in questions" class="btn btn-lg btn-primary btn-block"><a href="#/movies/questions/{{question.id}}" style="text-decoration: none;"><span style="color:white;">{{question.ask}}<span></a></button><br>
-
+			<div class="col-md-6 col-md-offset-3">
+			<button type="button" ng-repeat="question in questions" class="btn-group btn-group-justified btn-lg btn-primary"><a href="#/movies/questions/{{question.id}}" style="text-decoration: none;"><span style="color:white;">{{question.ask}}<span></a></button><br>
+			</div>
 		</div>
 
 
-<div ng-include src="'/partial/movie-list.html'"></div>
+<!-- <div ng-include src="'/partial/movie-list.html'"></div> -->
 
 </div>
  

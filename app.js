@@ -19,7 +19,7 @@ app.config(['$routeProvider',
       }).
       when('/movies/:movieId', {
         templateUrl: 'partial/movie-detail.html',
-        controller: 'movieDetailCtrl'
+        controller: 'movieListCtrl'
       }).
       otherwise({
         redirectTo: '/movies'

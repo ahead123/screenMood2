@@ -4,9 +4,15 @@
 			<div ng-controller="movieGenreCtrl">
 				<h1 class="text-primary">Okay let's get a feel for you're mood right now...</h1>
 				<h2>Who would you rather rob a bank with?</h2>
-				<button class="btn btn-lrg btn-success" ng-repeat="question in questions"><h4>{{question.nameone}}</h4></button>
+				<!-- <button class="btn btn-lrg btn-success btn-block" ng-repeat="question in questions"><h4>{{question.nameone}}</h4></button><br> -->
+				<ul class="list-unstyled">
+					<h2><a href=""><li ng-repeat="question in questions">{{question.nameone}}</li></a></h2>
+				</ul>
 				<h2>or</h2>
-				<button ng-repeat="question in questions" class="btn btn-lrg btn-warning"><h4>{{question.nametwo}}</h4></button><br>
+				<!-- <button ng-repeat="question in questions" class="btn btn-lrg btn-warning btn-block"><h4>{{question.nametwo}}</h4></button><br> -->
+				<ul class="list-unstyled">
+					<h2><a href="partial/popular-movie-list.html"><li ng-repeat="question in questions">{{question.nametwo}}</li></a></h2>
+				</ul>
 	
 			</div>
 		</div>
